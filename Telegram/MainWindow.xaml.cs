@@ -47,7 +47,7 @@ namespace Telegram
         string qarsiinsan;
         private void gonder_Click(object sender, RoutedEventArgs e)
         {
-            
+            mesaj.Text = null;
             Label gonderiren=new Label();
             Color c = Colors.Cyan;
             
@@ -91,19 +91,19 @@ namespace Telegram
             GELEN.Background = new SolidColorBrush(c);
             Chat.Items.Add(GELEN);
             ///////////////////////////////////////////////////////////////////////////////////
-            foreach (Human human in contact)
-            {
-                if ((human as Human).name == qarsiinsan && Chat.Items!=null)
-                {
-                    foreach (var item in Chat.Items)
-                    {
-                        (human as Human).data.Add((item as Label).Content.ToString());
-                    }
-                }
-            }
+            //foreach (Human human in contact)
+            //{
+            //    if ((human as Human).name == qarsiinsan && Chat.Items!=null)
+            //    {
+            //        foreach (var item in Chat.Items)
+            //        {
+            //            (human as Human).data.Add((item as Label).Content.ToString());
+            //        }
+            //    }
+            //}
             ///////////////////////////////////////////////////////////////////////////////////////////
-            var contactjson = JsonConvert.SerializeObject(contact, Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText("contact.json", contactjson);
+            //var contactjson = JsonConvert.SerializeObject(contact, Newtonsoft.Json.Formatting.Indented);
+            //File.WriteAllText("contact.json", contactjson);
 
         }
 

@@ -40,6 +40,9 @@
     <Reference Include="AIMLbot, Version=2.5.1.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AIMLbot-Radegast.2.5.1.1\lib\netstandard2.0\AIMLbot.dll</HintPath>
     </Reference>
+    <Reference Include="Emoji.Wpf, Version=0.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emoji.Wpf.0.3.3\lib\net40\Emoji.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=2.0.4.3, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.2.0.4\lib\net452\MaterialDesignColors.dll</HintPath>
     </Reference>
@@ -191,6 +194,9 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -208,6 +214,12 @@
       <HintPath>..\packages\System.Xml.XmlDocument.4.3.0\lib\net46\System.Xml.XmlDocument.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Typography.GlyphLayout, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emoji.Wpf.0.3.3\lib\net40\Typography.GlyphLayout.dll</HintPath>
+    </Reference>
+    <Reference Include="Typography.OpenFont, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emoji.Wpf.0.3.3\lib\net40\Typography.OpenFont.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
