@@ -43,18 +43,19 @@ namespace Telegram
             InitializeComponent();
         }
         List<Human> contact = new List<Human>();
+        List<string> zapas = new List<string>();
         string gelenmesaj;
         string qarsiinsan;
         private void gonder_Click(object sender, RoutedEventArgs e)
         {
-            mesaj.Text = null;
+
             Label gonderiren=new Label();
             Color c = Colors.Cyan;
             
 
             gonderiren.Background=new SolidColorBrush(c);
             gonderiren.Content = $"You:{mesaj.Text}";
-          
+            zapas.Add($"You:{mesaj.Text}");
             Chat.HorizontalAlignment = HorizontalAlignment.Stretch;
             gonderiren.HorizontalContentAlignment= HorizontalAlignment.Right;
             
@@ -86,24 +87,28 @@ namespace Telegram
             Chat.HorizontalAlignment = HorizontalAlignment.Stretch;
             GELEN.HorizontalContentAlignment = HorizontalAlignment.Left;
 
-
+            zapas.Add($"You:{gelenmesaj}");
 
             GELEN.Background = new SolidColorBrush(c);
             Chat.Items.Add(GELEN);
+            mesaj.Text = null;
             ///////////////////////////////////////////////////////////////////////////////////
-            //foreach (Human human in contact)
-            //{
-            //    if ((human as Human).name == qarsiinsan && Chat.Items!=null)
-            //    {
-            //        foreach (var item in Chat.Items)
-            //        {
-            //            (human as Human).data.Add((item as Label).Content.ToString());
-            //        }
-            //    }
-            //}
+            foreach (Human human in contact)
+            {
+                if ((human as Human).name == qarsiinsan && Chat.Items != null)
+                {
+                    foreach (var item in zapas)
+                    {
+                      
+                       (human as Human).data.Add(item);
+                        
+
+                    }
+                }
+            }
             ///////////////////////////////////////////////////////////////////////////////////////////
-            //var contactjson = JsonConvert.SerializeObject(contact, Newtonsoft.Json.Formatting.Indented);
-            //File.WriteAllText("contact.json", contactjson);
+            var contactjson = JsonConvert.SerializeObject(contact, Newtonsoft.Json.Formatting.Indented);
+            File.WriteAllText("contact.json", contactjson);
 
         }
 
