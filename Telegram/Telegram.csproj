@@ -291,6 +291,9 @@
   <ItemGroup>
     <Resource Include="ConfigurationFiles\DefaultPredicates.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iphone_sms_original %28online-audio-converter.com%29.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
